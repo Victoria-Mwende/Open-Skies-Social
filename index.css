@@ -1,0 +1,359 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Hero Section Styles */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+  }
+  
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .cta-buttons .button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    background: linear-gradient(to top, #ff4500, #ff6347, #ff7f50, #ff6347, #ff4500);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  .cta-buttons .button:hover {
+    background-color: rgba(0, 123, 255, 1);
+  }
+  /* Drinks Section Styles */
+#drinks {
+  padding: 50px 0;
+}
+
+/* .intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.intro p {
+  font-size: 1.1em;
+  color: #666;
+} */
+.intro {
+  background: linear-gradient(135deg, #ff4500, #ff6347, #ff7f50, #ff6347, #ff4500); /* Sunset gradient background */
+  padding: 25px; /* Increase padding for a slightly more spacious feel */
+  margin: 20px auto; /* Reduce margin below the container and center it */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  max-width: 900px; /* Constrain the width */
+  text-align: center; /* Center align text */
+  color: #f0eeee; /* White text color for contrast */
+  font-family: 'Trebuchet MS', sans-serif; /* Adventurous font style */
+}
+
+.intro p {
+  font-size: 20px; /* Slightly larger font size */
+  line-height: 1.8; /* Adjust line height for readability */
+  margin: 0; /* Remove default margin */
+  font-weight: bold; /* Bold text */
+}
+
+@media (max-width: 768px) {
+  .intro {
+    padding: 30px; /* Adjust padding for smaller screens */
+  }
+
+  .intro p {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+}
+
+
+.accommodation {
+            text-align: center;
+            padding: 3px;
+            background: rgba(7, 233, 10, 0.6);
+            margin-bottom: 20px;
+        }
+        .accommodation h2 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+        .accommodation-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .accommodation-box {
+            flex: 2;
+            min-width: 100px;
+            border: 2px solid #4CAF50;
+            padding: 14px;
+            border-radius: 8px;
+            background: linear-gradient(to top, #ff4500, #ff6347, #ff7f50, #ff6347, #ff4500);
+          }
+        .accommodation-box h3 {
+            color:  #e5eae5;
+          
+        }
+        .accommodation-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        .accommodation-box li {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #f0eeee;
+        }
+        .accommodation-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2em;
+    }
+  
+    .cta-buttons {
+      flex-direction: column;
+    }
+  
+    .cta-buttons .button {
+      margin-bottom: 10px;
+      width: 80%;
+    }
+  }
+  /* Adventures Section */
+.adventures {
+  background: linear-gradient(135deg, #ff4500, #ff6347, #ff7f50);
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.adventures h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.adventures p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.adventures ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.adventures li {
+  font-size: 1.3em;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.adventures li:hover {
+  transform: scale(1.1);
+}
+
+/* Destinations Section */
+/* Destinations Section - Background Slideshow */
+.destinations {
+  position: relative;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.destinations::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  z-index: -1;
+}
+
+/* Destination Boxes */
+.destination-box {
+  background: rgba(0, 0, 0, 0.6);
+  border-left: 5px solid rgb(255, 68, 0);
+  padding: 20px;
+  margin: 15px auto;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.destination-box h3 {
+  color: #ff4500;
+  font-size: 1.8em;
+}
+
+.destination-box p {
+  font-size: 1.2em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .destination-box {
+    width: 90%;
+  }
+}
+
+
+/* About Us Section */
+.about-us {
+  background: linear-gradient(to right, #ff4500, #ff7f50);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.about-us h2 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.about-us p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto 15px;
+}
+
+.about-us h3 {
+  font-size: 2em;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .adventures li {
+    font-size: 1.1em;
+    padding: 8px 15px;
+  }
+
+  .destination-box {
+    width: 90%;
+  }
+
+  .about-us p {
+    font-size: 1.1em;
+  }
+}
+footer {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #4CAF50, #8B4513, #2f53f5, #ff5500);
+  padding: 20px 0;
+}
+
+footer .container {
+  max-width: 1200px; /* Ensures proper spacing */
+}
+
+footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ensures spacing */
+}
+
+footer .col-md-3 {
+  flex: 1 1 22%; /* Makes sure they are in four equal columns */
+  min-width: 250px; /* Prevents shrinking too much */
+  margin-bottom: 20px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer .btn {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.background-container {
+  width: 100%;
+  min-height: 800px; /* Adjust to fit your design */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background 1s ease-in-out;
+}
+
+.adventures, .destinations {
+  padding: 50px;
+  text-align: center;
+  color: white; /* Ensure text is readable */
+}
+i {
+  color: white;
+}
+
