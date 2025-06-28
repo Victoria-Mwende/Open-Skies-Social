@@ -24,20 +24,3 @@ document.addEventListener("DOMContentLoaded", function () {
     changeBackground();
     setInterval(changeBackground, 5000); // Change every 5 seconds
 });
-const images = [
-    "images/background1.jpg",
-    "images/background2.jpg",
-    "images/background3.jpg"
-  ];
-  
-  let index = 0;
-  const hero = document.querySelector(".hero");
-  
-  function changeBackground() {
-    hero.style.backgroundImage = `url(${images[index]})`;
-    index = (index + 1) % images.length;
-  }
-  
-  setInterval(changeBackground, 4000);
-  changeBackground();
-  

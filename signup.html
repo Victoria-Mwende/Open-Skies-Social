@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="index.html">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #95b6ea;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .signup-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+    h2 {
+      text-align: center;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .success {
+      color: green;
+      text-align: center;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Sign Up</h2>
+    <form id="signup-form">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email Address" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Create Account</button>
+      <div class="success" id="success-msg"></div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("signup-form");
+    const successMsg = document.getElementById("success-msg");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      // Simulate storing user data
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+
+      // Save registration status
+      localStorage.setItem("isRegistered", "true");
+      localStorage.setItem("userName", name);
+      localStorage.setItem("userEmail", email);
+
+      successMsg.textContent = "Registration successful! Redirecting...";
+
+      // Simulate redirect after short delay
+      setTimeout(() => {
+        window.location.href = "signup.html"; // Change this to your homepage or dashboard
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
